@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Container  
+const Container 
 
 const Navbar = () => {
     return (
