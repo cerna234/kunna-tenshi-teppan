@@ -58,8 +58,6 @@ const Booking = styled.div`
    
 `
 
-const Container  
-
 const Navbar = () => {
     return (
         <Container>
