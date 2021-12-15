@@ -1,8 +1,18 @@
+<<<<<<< Updated upstream
 import Home from "./pages/Home"
-import Navbar from "./components/Navbar";
+=======
+// import Home from "./pages/Home"
+>>>>>>> Stashed changes
+import Footer from "./Components/Footer";
+import HomeQuote from "./Components/HomeQuote";
 
 const App = () => {
-  return <Home/>;
+  return (
+    <div>
+      <HomeQuote/>
+      <Footer/>
+    </div>
+  )
 };
 
 export default App;
