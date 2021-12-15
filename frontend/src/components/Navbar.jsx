@@ -57,7 +57,6 @@ const Booking = styled.div`
     font-weight: bold;
    
 `
-
 const Navbar = () => {
     return (
         <Container>
