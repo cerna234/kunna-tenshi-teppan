@@ -1,19 +1,11 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 import Home from "./pages/Home"
-=======
-// import Home from "./pages/Home"
->>>>>>> Stashed changes
-=======
-// import Home from "./pages/Home"
->>>>>>> Stashed changes
+import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import HomeQuote from "./Components/HomeQuote";
 
 const App = () => {
   return (
     <div>
-      <HomeQuote/>
+      <Navbar/>
       <Footer/>
     </div>
   )
