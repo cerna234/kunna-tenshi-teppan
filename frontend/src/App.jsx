@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import Home from "./pages/Home"
+=======
+// import Home from "./pages/Home"
+>>>>>>> Stashed changes
 =======
 // import Home from "./pages/Home"
 >>>>>>> Stashed changes

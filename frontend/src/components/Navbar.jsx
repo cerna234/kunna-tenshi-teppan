@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-<<<<<<< Updated upstream
 const Container = styled.div`
     height: 60px;
     background-color: black;
@@ -58,9 +57,6 @@ const Booking = styled.div`
     font-weight: bold;
    
 `
-
-=======
->>>>>>> Stashed changes
 const Navbar = () => {
     return (
         <Container>
