@@ -1,66 +1,73 @@
-import React from 'react'
-import styled from 'styled-components'
-import {FiInstagram} from 'react-icons/fi'
-import {FaFacebookSquare} from 'react-icons/fa'
+import React from "react";
+import styled from "styled-components";
+import { FiInstagram } from "react-icons/fi";
+import { FaFacebookSquare } from "react-icons/fa";
+import { MdRestaurantMenu } from "react-icons/md";
 
-const Container = styled.div`
-    background-color: #090909;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 6vh;
-    color: white;
+const Container = styled.footer`
+  background-color: #090909;
+  position: relative;
+  height: 5vh;
+  color: white;
+  padding: 10px;
 `;
 
 const Wrapper = styled.div`
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
-const Logo = styled.div`
+const Logo = styled.a`
+  color: white;
+  text-decoration: none;
 `;
 
-const Left = styled.div`
-`;
+const Email = styled.a`
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  color: #898787;
 
-const Info = styled.div`
-    display: flex;
-`;
-
-const Center = styled.div`
-
+  @media (max-width: 420px) {
+    display: none;
+  }
 `;
 
 const Media = styled.div`
-    display: flex;
-    flex: 1;
-    flex-direction: row;
+  display: flex;
+  justify-content: center;
 `;
 
-const Right = styled.div`
-    padding: 2px;
+const Icons = styled.a`
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease-out;
+  &:hover {
+    transform: scale(1.3);
+    color: #E33812;
+  }
 `;
-
 
 function Footer() {
-    return (
-        <Container>
-            <Wrapper>
-                <Logo>
-                    <Left>Logo</Left>
-                </Logo>
-                <Info>
-                    <Center></Center>
-                </Info>
-                <Media>
-                    <Right><FiInstagram/></Right>
-                    <Right><FaFacebookSquare/></Right>
-                </Media>
-            </Wrapper>
-        </Container>
-    )
+  return (
+    <Container>
+      <Wrapper>
+        <Logo>
+          <MdRestaurantMenu size={30} />
+        </Logo>
+        <Email> Kunnatenshi4@gmail.com </Email>
+        <Media>
+          <Icons href="https://www.instagram.com/kunnatenshiteppan2021">
+            <FiInstagram size={20} />
+          </Icons>
+          <Icons>
+            <FaFacebookSquare size={20} />
+          </Icons>
+        </Media>
+      </Wrapper>
+    </Container>
+  );
 }
 
-export default Footer
+export default Footer;
