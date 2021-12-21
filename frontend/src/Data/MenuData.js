@@ -112,3 +112,5 @@ const Menu_Data = [
         description: ''
     },
 ]
+
+export default Menu_Data;
