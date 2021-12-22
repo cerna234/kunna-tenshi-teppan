@@ -10,6 +10,7 @@ const Container = styled.footer`
   height: 5vh;
   color: white;
   padding: 10px;
+  z-index: 200;
 `;
 
 const Wrapper = styled.div`
