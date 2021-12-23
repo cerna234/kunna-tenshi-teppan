@@ -67,7 +67,6 @@ const Burger = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
-
   @media screen and (max-width: 500px) {
     display: flex;
   }
