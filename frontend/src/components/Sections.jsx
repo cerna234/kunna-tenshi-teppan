@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {mobile} from '../responsive'
+import {mobile,mobile1000,mobile1400} from '../responsive'
 
 const Container = styled.div`
 
@@ -52,21 +52,25 @@ const Title = styled.div`
     ${mobile({width: "50%", height: "100%"})};
 
     h2{
-        font-size: 13px;
+        font-size: 12px;
         text-align: center;
         padding-top: 19vh;
         color: #ff0000d7;
-        ${mobile({fontSize:"28px"})};
+        ${mobile({fontSize:"23px"})};
+        ${mobile({paddingTop:"22vh"})};
+        ${mobile1000({paddingTop:"20.5vh"})};
+        
         
         
     }
     h3{
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
        position: relative;
-       top: 23vh;
+       top: 22.5vh;
         color: #6b6a6a13;
-        ${mobile({fontSize:"50px",top:"27vh"})};
+        ${mobile({fontSize:"30px",top:"27vh"})};
+        ${mobile1000({fontSize:"50px",top:"27vh"})};
         
     }
 

@@ -6,7 +6,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const Nav = styled.div`
   display: flex;
   height: 8vh;
-  background-color: black;
+  width: 100%;
+  background-color: none;
+  position: fixed;
+  z-index: 1000;
   justify-content: space-around;
 
   @media screen and (max-width: 500px) {
@@ -35,7 +38,6 @@ const NavLinks = styled.div`
     left: ${({click})=>(click ? 0 : '-100%')};
     flex-direction: column;
     height: 90vh;
-    background-color: black;
     width: 100%;
     transition: all 150ms ease-in-out;
   }
