@@ -14,7 +14,7 @@ const Home = () => {
 
             </Sections>
 
-            <Sections label="row" title="HELLPO" subtext="subtext">
+            <Sections label="row-reverse" title="HELLPO" subtext="subtext">
 
             </Sections>
         </div>
