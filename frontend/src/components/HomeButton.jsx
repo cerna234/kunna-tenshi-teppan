@@ -8,7 +8,7 @@ const Button = styled.button`
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.45);
     position: absolute;
     border: none;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 1rem;
     transition: all 0.3s ease-in-out;
     &:hover{
