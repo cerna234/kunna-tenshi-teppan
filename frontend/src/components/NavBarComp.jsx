@@ -14,6 +14,7 @@ const Nav = styled.div`
 
   @media screen and (max-width: 500px) {
     justify-content: space-between;
+    background: ${({ click }) => (click ? "black" : "none")};
   }
 `;
 
@@ -35,11 +36,12 @@ const NavLinks = styled.div`
   @media screen and (max-width: 500px) {
     position: absolute;
     top: 8vh;
-    left: ${({click})=>(click ? 0 : '-100%')};
+    left: ${({ click }) => (click ? 0 : "-100%")};
     flex-direction: column;
     height: 90vh;
     width: 100%;
     transition: all 150ms ease-in-out;
+    background: black;
   }
 `;
 
@@ -75,14 +77,14 @@ const Burger = styled.button`
 `;
 
 const NavBarComp = () => {
-    const [click, setClick] = useState(false);
+  const [click, setClick] = useState(false);
 
-    const ChangeClick = ()=>{
-        setClick(!click);
-    }
+  const ChangeClick = () => {
+    setClick(!click);
+  };
 
   return (
-    <Nav>
+    <Nav click={click}>
       <Logo href="/">Logo</Logo>
       <NavLinks click={click}>
         <Links href="/">Home</Links>
@@ -90,8 +92,8 @@ const NavBarComp = () => {
         <Links href="/menu">Menu</Links>
         <Links href="/booking">Booking</Links>
       </NavLinks>
-      <Burger onClick={()=>ChangeClick()}>
-        {click ? <FaTimes size={25}/> : <FaBars size={25}/>}
+      <Burger onClick={() => ChangeClick()}>
+        {click ? <FaTimes size={25} /> : <FaBars size={25} />}
       </Burger>
     </Nav>
   );

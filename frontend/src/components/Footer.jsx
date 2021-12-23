@@ -7,9 +7,9 @@ import { MdRestaurantMenu } from "react-icons/md";
 const Container = styled.footer`
   background-color: #090909;
   position: relative;
-  height: 5vh;
+  height: 10vh;
   color: white;
-  padding: 10px;
+  padding: 5px 10px;
   z-index: 200;
 `;
 
@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 1rem;
 `;
 
 const Logo = styled.a`
@@ -46,7 +47,7 @@ const Icons = styled.a`
   transition: all 0.2s ease-out;
   &:hover {
     transform: scale(1.3);
-    color: #E33812;
+    color: #e33812;
   }
 `;
 
