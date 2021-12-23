@@ -7,12 +7,22 @@ const ItemContainer = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  height: 100vh;
+  height: 130vh;
 `;
+
+
+const MenuImage = styled.div`
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    background-size: cover ;
+    box-shadow: 4px 4px 2px ;
+`
 
 const MenuItems = styled.div`
   display: flex;
-  height: 25vh;
+  height: 50vh;
+  background-color:rgb(12, 12, 12);
   border: solid 1px black;
   padding: 10px;
   justify-content: space-between;
@@ -27,15 +37,22 @@ const MenuItems = styled.div`
 const Title = styled.h3`
   color: black;
   padding: 10px;
+  text-align: center;
+  color:white;
 
+  .desciption{
+    color: #8c8b8b;
+    font-size: 10px;
+  }
   @media screen and (max-width: 480px) {
     font-size: 1rem;
   }
 `;
 
 const Price = styled.p`
-  color: black;
+  color: #bfbbbb;
   font-weight: 400;
+  
 `;
 
 const PageInfo = styled.p`
@@ -55,6 +72,7 @@ const PageInfo = styled.p`
 const Arrow = styled.div`
   cursor: pointer;
   font-size: 2rem;
+  
 `;
 
 const Page = styled.div`
@@ -102,7 +120,12 @@ const MenuItem = () => {
       {MenuData.slice(currentPage - 1, currentPage + 3).map((obj, index) => {
         return (
           <MenuItems key={obj.id}>
-            <Title>{obj.name}</Title>
+            <div>
+            <MenuImage style={{backgroundImage: "url(" + obj.img + ")"}}></MenuImage>
+            </div>
+            
+            <Title>{obj.name}<br/><span className="desciption">{obj.description}</span></Title>
+            
             <Price>${obj.price}</Price>
           </MenuItems>
         );

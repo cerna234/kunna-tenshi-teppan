@@ -5,43 +5,100 @@ import {mobile} from '../responsive'
 const Container = styled.div`
 
     width:100%;
-    background-color:rgb(24, 23, 23);
+    background-color:rgb(12, 12, 12);
     ${mobile({ height: "100vh" })}   
-
-    height: 70vh;
+    
+    height: 60vh;
     display: flex;
+
+
+    #hello{
+        background-color: red;
+    }
+    
+    
+    
 `;
 
 const Left = styled.div`
-    width: 60%;
+    width: 50%;
     height: 100%;
-    background-color: blue;
+ 
     display: flex;
     flex-direction: column;
-
+   
+    
 
     ${mobile({flexDirection: "row"})};
+    ${mobile({width: "60%"})};
 `
 
 const Right = styled.div`
-    width: 40%;
+    width: 60%;
     height: 100%;
-    background-color: #ff7b00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    ${mobile({width: "40%"})};
+
+    
+   
 `
 
 const Title = styled.div`
     width: 100%;
     height: 50%;
-    background-color: green;
+   
     ${mobile({width: "50%", height: "100%"})};
+
+    h2{
+        font-size: 13px;
+        text-align: center;
+        padding-top: 19vh;
+        color: #ff0000d7;
+        ${mobile({fontSize:"28px"})};
+        
+        
+    }
+    h3{
+        font-size: 30px;
+        text-align: center;
+       position: relative;
+       top: 23vh;
+        color: #6b6a6a13;
+        ${mobile({fontSize:"50px",top:"27vh"})};
+        
+    }
 
 `
 
 const Subtext = styled.div`
 width: 100%;
 height: 50%;
-background-color: green;
+
 ${mobile({width: "50%", height: "100%"})};
+
+p{
+    font-size: 10px;
+    text-align: center;
+    color: #ffffffae;
+    ${mobile({paddingTop: "25vh"})};
+    ${mobile({fontSize:"20px"})};
+}
+
+`
+
+
+const ImageSection = styled.div`
+    width: 90%;
+    height: 60%;
+    position: relative;
+    left: 5%;
+    background-color: red;
+    background-size:cover ;
+    background-position: right;
+    box-shadow: 2px 2px 5px black;
+ 
 
 `
 
@@ -49,21 +106,26 @@ ${mobile({width: "50%", height: "100%"})};
 
 const Sections = (props) => {
 
-    var url = props.url
-    var png = props.png
+    let url = props.url;
+    let direction = props.direction;
+   
     return (
-        <Container>
+        <Container style={{flexDirection: direction}} >
             <Left>
+                
                 <Title>
-                    <h2>Title</h2>
+                    <h3>{props.title}</h3>
+                    <h2>{props.title}</h2>
                 </Title>
 
                 <Subtext>
-                    subtext
+                    <p>{props.subtext}</p>
                 </Subtext>
             </Left>
             <Right>
-                image
+               <ImageSection style={{backgroundImage: "url(" + url + ")"}}>
+
+               </ImageSection>
             </Right>
         </Container>
     )
