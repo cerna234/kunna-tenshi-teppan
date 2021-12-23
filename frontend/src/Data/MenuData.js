@@ -2,21 +2,21 @@ const Menu_Data = [
     {
         id: 1,
         name: "Kun'na Tenshi especial, filet mignon, lobster, and shrimp",
-        img: '',
+        img: 'https://c8.alamy.com/comp/2BAA4H2/flames-in-a-frying-pan-a-professional-chef-produces-flames-for-food-chef-cooking-with-open-fire-pan-fire-cooking-show-selective-focus-2BAA4H2.jpg',
         price: 100,
-        description: ''
+        description: 'ehvbfen'
     },
     {
         id: 2,
         name: 'Chicken and Fillet mignon',
-        img: '',
+        img: 'https://c8.alamy.com/comp/2BAA4H2/flames-in-a-frying-pan-a-professional-chef-produces-flames-for-food-chef-cooking-with-open-fire-pan-fire-cooking-show-selective-focus-2BAA4H2.jpg',
         price: 72,
         description: ''
     },
     {
         id: 3,
         name: 'Chicken & Shrimp',
-        img: '',
+        img: 'https://cooktoria.com/wp-content/uploads/2019/01/chicken-and-shrimp-pasta-1.jpg',
         price: 63,
         description: ''
     },
@@ -112,3 +112,5 @@ const Menu_Data = [
         description: ''
     },
 ]
+
+export default Menu_Data;
