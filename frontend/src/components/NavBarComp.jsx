@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
-// import { Link } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 
 const Nav = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const Nav = styled.div`
   }
 `;
 
-const Logo = styled.a`
+const Logo = styled.div`
   display: flex;
   justify-content: center;
   color: white;
@@ -45,7 +45,7 @@ const NavLinks = styled.div`
   }
 `;
 
-const Links = styled.a`
+const Links = styled(Link)`
   padding: 15px;
   cursor: pointer;
   transition: all 200ms ease-in-out;
@@ -85,12 +85,12 @@ const NavBarComp = () => {
 
   return (
     <Nav click={click}>
-      <Logo href="/">Logo</Logo>
+      <Logo>Logo</Logo>
       <NavLinks click={click}>
-        <Links href="/">Home</Links>
-        <Links href="/about">About</Links>
-        <Links href="/menu">Menu</Links>
-        <Links href="/booking">Booking</Links>
+        <Links to="/">Home</Links>
+        <Links to="/about">About</Links>
+        <Links to="/menu">Menu</Links>
+        <Links to="/booking">Booking</Links>
       </NavLinks>
       <Burger onClick={() => ChangeClick()}>
         {click ? <FaTimes size={25} /> : <FaBars size={25} />}
