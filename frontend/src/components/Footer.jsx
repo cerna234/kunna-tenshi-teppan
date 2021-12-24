@@ -47,7 +47,7 @@ const Icons = styled.a`
   transition: all 0.2s ease-out;
   &:hover {
     transform: scale(1.3);
-    color: #e33812;
+    color: #f51111;
   }
 `;
 
@@ -63,9 +63,9 @@ function Footer() {
           <Icons href="https://www.instagram.com/kunnatenshiteppan2021" target='_blank'>
             <FiInstagram size={20} />
           </Icons>
-          {/* <Icons>
+          <Icons>
             <FaFacebookSquare size={20} />
-          </Icons> */}
+          </Icons>
         </Media>
       </Wrapper>
     </Container>
