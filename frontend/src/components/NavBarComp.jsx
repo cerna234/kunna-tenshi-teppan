@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
+import LogoImg from './Images/logo.png'
 
 const Nav = styled.div`
   display: flex;
@@ -25,6 +26,13 @@ const Logo = styled.div`
   align-items: center;
   text-decoration: none;
   margin-left: 25px;
+
+
+  img{
+    width: 100px;
+    height: 100px;
+    padding-top: 10px;
+  }
 `;
 
 const NavLinks = styled.div`
@@ -32,6 +40,7 @@ const NavLinks = styled.div`
   align-items: center;
   color: white;
   z-index: 1;
+ 
 
   @media screen and (max-width: 500px) {
     position: absolute;
@@ -53,6 +62,7 @@ const Links = styled(Link)`
   color: #fff;
   letter-spacing: 1px;
   font-size: 0.8rem;
+  
 
   &:hover {
     color: #e33812;
@@ -85,7 +95,7 @@ const NavBarComp = () => {
 
   return (
     <Nav click={click}>
-      <Logo>Logo</Logo>
+      <Logo><img src={LogoImg}></img></Logo>
       <NavLinks click={click}>
         <Links to="/">Home</Links>
         <Links to="/about">About</Links>
