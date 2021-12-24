@@ -7,27 +7,32 @@ import {mobile} from '../responsive';
 const Container = styled.div`
     width: 100%;
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1543243240-fb18ee7927b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZsYW1lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60") center;
     background-color:rgb(12, 12, 12);
     display: flex;
-    flex-direction: column;
+    jusitfy-content: center;
+    align-items: center;
     ${mobile({ flexDirection: "row" })} ;
 `;
 
 const InfoSection = styled.div`
-    width: 100%;
-    height: 50%;
+    width: 80%;
+    left: 10%;
+    height: 60%;
     text-align: center;
     position: relative;
-    top:10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
     h2{
-        position: absolute;
+        position: relative;
+        top: 15vh;
         width: 100%;
         font-size: 60px;
         color: #6d6d6d1f;
         z-index: 1;
-        ${mobile({fontSize:"80px"})} ;
-        ${mobile({paddingTop:"20%"})}
+
 
         
     }
@@ -35,21 +40,12 @@ const InfoSection = styled.div`
     h1{
         color: white;
         z-index: 2;
-        position: relative;
-        top: 30px;
-        ${mobile({paddingTop:"20%"})}
-        ${mobile({top:"37px"})}
+        
     }
 
     h3{
         color: white;
         z-index: 3;
-        position: relative;
-        width: 80%;
-        left: 10%;
-        padding-top: 10%;
-        ${mobile({paddingTop:"20%"})}
-        
         
         
     }
@@ -83,7 +79,7 @@ const ErrorPage = () => {
                 <h1>404 PAGE NOT FOUND</h1>
                 <br/>
                 <h3>Hey you look a little lost! But no need to worry. I know a place where we could get tasty food! </h3>
-                <br/>
+                
                 <Link to={'/'}>
                     <Button>
                     Back To Tasty Food
