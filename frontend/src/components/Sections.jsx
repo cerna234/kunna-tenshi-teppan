@@ -5,7 +5,7 @@ import {mobile,mobile1000,mobile1400} from '../responsive'
 const Container = styled.div`
 
     width:100%;
-    background-color:rgb(12, 12, 12);
+    background-color:rgb(24, 24, 24);
     ${mobile({ height: "100vh" })}   
     
     height: 60vh;
@@ -68,7 +68,7 @@ const Title = styled.div`
         text-align: center;
        position: relative;
        top: 22.5vh;
-        color: #6b6a6a13;
+        color: #8a898913;
         ${mobile({fontSize:"30px",top:"27vh"})};
         ${mobile1000({fontSize:"50px",top:"27vh"})};
         
@@ -86,6 +86,7 @@ p{
     font-size: 10px;
     text-align: center;
     color: #ffffffae;
+    
     ${mobile({paddingTop: "25vh"})};
     ${mobile({fontSize:"20px"})};
 }
