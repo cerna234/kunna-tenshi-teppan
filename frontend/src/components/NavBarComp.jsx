@@ -14,7 +14,6 @@ const Nav = styled.div`
 
   @media screen and (max-width: 500px) {
     justify-content: space-between;
-    background: ${({ click }) => (click ? "black" : "none")};
   }
 `;
 
@@ -35,11 +34,13 @@ const NavLinks = styled.div`
 
   @media screen and (max-width: 500px) {
     position: absolute;
-    top: 8vh;
+    top: 0;
     left: ${({ click }) => (click ? 0 : "-100%")};
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
+    z-index: -1;
+    justify-content: center;
     transition: all 150ms ease-in-out;
     background: black;
   }
@@ -60,6 +61,7 @@ const Links = styled(Link)`
   }
   @media screen and (max-width: 500px) {
     padding: 25px 50px;
+    font-size: 1.2rem;
   }
 `;
 
@@ -84,13 +86,21 @@ const NavBarComp = () => {
   };
 
   return (
-    <Nav click={click}>
+    <Nav>
       <Logo>Logo</Logo>
       <NavLinks click={click}>
-        <Links to="/">Home</Links>
-        <Links to="/about">About</Links>
-        <Links to="/menu">Menu</Links>
-        <Links to="/booking">Booking</Links>
+        <Links to="/" onClick={() => setClick(false)}>
+          Home
+        </Links>
+        <Links to="/about" onClick={() => setClick(false)}>
+          About
+        </Links>
+        <Links to="/menu" onClick={() => setClick(false)}>
+          Menu
+        </Links>
+        <Links to="/booking" onClick={() => setClick(false)}>
+          Booking
+        </Links>
       </NavLinks>
       <Burger onClick={() => ChangeClick()}>
         {click ? <FaTimes size={25} /> : <FaBars size={25} />}
