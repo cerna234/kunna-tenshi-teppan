@@ -80,7 +80,7 @@ const Page = styled.div`
 const MenuItem = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState(0);
-  const pageLimit = 4;
+  const pageLimit = Math.ceil(MenuData.length/4);
 
   if (MenuData === 0) {
     return null;
