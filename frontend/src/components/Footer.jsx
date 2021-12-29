@@ -60,10 +60,16 @@ function Footer() {
         </Logo>
         <Email> Kunnatenshi4@gmail.com </Email>
         <Media>
-          <Icons href="https://www.instagram.com/kunnatenshiteppan2021" target='_blank'>
+          <Icons
+            href="https://www.instagram.com/kunnatenshiteppan2021"
+            target="_blank"
+          >
             <FiInstagram size={20} />
           </Icons>
-          <Icons href="https://www.facebook.com" target='_blank'>
+          <Icons
+            href="https://www.facebook.com/kunnatenshiteppan2021-110651691448563"
+            target="_blank"
+          >
             <FaFacebookSquare size={20} />
           </Icons>
         </Media>
