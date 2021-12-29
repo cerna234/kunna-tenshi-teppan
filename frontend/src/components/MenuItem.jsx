@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import MenuData from "../Data/MenuData";
-import {
-  ArrowLeftRounded,
-  ArrowRightRounded,
-} from "@material-ui/icons";
+import { ArrowLeftRounded, ArrowRightRounded } from "@material-ui/icons";
 
 const ItemContainer = styled.div`
   display: flex;
@@ -77,10 +74,15 @@ const Page = styled.div`
   color: #e33812;
 `;
 
+const Blank = styled.div`
+  margin: 0.8rem;
+  cursor: none;
+`;
+
 const MenuItem = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState(0);
-  const pageLimit = Math.ceil(MenuData.length/4);
+  const pageLimit = Math.ceil(MenuData.length / 4);
 
   if (MenuData === 0) {
     return null;
@@ -92,6 +94,7 @@ const MenuItem = () => {
       // setItems(0);
       setCurrentPage(currentPage + 1);
       setItems(items + 4);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
     // } else {
     //   setCurrentPage(currentPage + 1);
@@ -99,24 +102,19 @@ const MenuItem = () => {
     // }
   };
 
-  const Blank = styled.div`
-    margin: 0.8rem;
-  `;
-
   const prevPage = () => {
     if (currentPage !== 1) {
       // setCurrentPage(pageLimit);
       // setItems(MenuData.length - 5);
       setCurrentPage(currentPage - 1);
       setItems(items - 4);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
     // else {
     //   setCurrentPage(currentPage - 1);
     //   setItems(items - 4);
     // }
   };
-
-  console.log(currentPage);
 
   return (
     <ItemContainer>

@@ -3,6 +3,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom/cjs/react-router-dom.min";
+import ScrollToTop from "./helpers/scrollToTop";
 import NavBarComp from "./components/NavBarComp";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <Router>
       <NavBarComp />
+      <ScrollToTop />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
