@@ -128,14 +128,28 @@ const Form = () => {
   return (
     <Container>
       <FormContainer>
-        <FormContent onSubmit={handleSubmit}>
+        <FormContent
+          onSubmit={handleSubmit}
+          action="https://formsubmit.co/formtests30@gmail.com
+          "
+          method="POST"
+        >
           <Title>Book a Consultation</Title>
+          {/* Honey pot */}
+          <input type="text" name="_honey" style={{ display: "none" }} />
+
+          {/* disable captcha */}
+          <input type="hidden" name="_captcha" value="false" />
+
+          {/* redirect to homepage */}
+          <input type="hidden" name="_next" value="http://localhost:3000/" />
+
           <SubSection>
             <Info>
               <Label htmlFor="first">First</Label>
               <Input
                 type="text"
-                name="firstName"
+                name="First&nbsp;Name"
                 id="first"
                 placeholder="First Name"
               />
@@ -144,7 +158,7 @@ const Form = () => {
               <Label htmlFor="last">Last</Label>
               <Input
                 type="text"
-                name="lastName"
+                name="Last&nbsp;Name"
                 id="last"
                 placeholder="Last Name"
               />
@@ -154,37 +168,38 @@ const Form = () => {
             <Label htmlFor="email">Email</Label>
             <Input
               type="email"
-              name="email"
+              name="Email&nbsp;Address"
               id="email"
-              pattern=".+@[gG][mM][aA][iI][lL][.][cC][oO][mM]"
-              placeholder="example@gmail.com"
+              pattern="+@+.com"
+              placeholder="example@email.com"
             />
           </Info>
           <Info>
             <Label htmlFor="phonenum">Phone Number</Label>
             <Input
               type="tel"
-              name="phoneNumber"
+              name="Phone&nbsp;Number"
               id="phonenum"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               placeholder="123-123-1234"
+              required
             />
           </Info>
           <Info>
             <Label htmlFor="date">Please choose a date</Label>
-            <Input type="date" name="date" id="date" />
+            <Input type="date" name="Date" id="date" required />
           </Info>
           <SubSection>
             <Info>
               <Label for="appt">Time</Label>
-              <Input type="time" id="appt" name="time" />
+              <Input type="time" id="appt" name="Time" required />
             </Info>
             <Info>
               <Label for="guest">Guests</Label>
               <Input
                 type="number"
                 id="guest"
-                name="guest size"
+                name="Quest&nbsp;Size"
                 min="12"
                 max="100"
               />
