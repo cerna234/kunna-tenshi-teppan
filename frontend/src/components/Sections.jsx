@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import {mobile,mobile1000,mobile1400} from '../responsive'
+import {mobile,mobile1000,mobile1400,HorizontalView} from '../responsive'
 
 const Container = styled.div`
 
     width:100%;
     background-color:rgb(24, 24, 24);
+    ${HorizontalView({height:"150vh"})};
     ${mobile({ height: "100vh" })}   
+    
     
     height: 60vh;
     display: flex;
@@ -56,6 +58,7 @@ const Title = styled.div`
         text-align: center;
         padding-top: 19vh;
         color: #ff0000d7;
+       
         ${mobile({fontSize:"23px"})};
         ${mobile({paddingTop:"22vh"})};
         ${mobile1000({paddingTop:"20.5vh"})};
@@ -69,6 +72,7 @@ const Title = styled.div`
        position: relative;
        top: 22.5vh;
         color: #8a898913;
+        ${HorizontalView({top:"26vh"})};
         ${mobile({fontSize:"30px",top:"27vh"})};
         ${mobile1000({fontSize:"50px",top:"27vh"})};
         

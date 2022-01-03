@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { HomeButton } from "./HomeButton";
-import {mobile} from '../responsive'
+import {mobile, HorizontalView} from '../responsive'
 import { NavLink as Link } from "react-router-dom";
 import LandingImage from './Images/LandingPage.png'
 
@@ -28,7 +28,9 @@ flex-direction: column;
 justify-content: space-evenly;
 text-shadow: 3px 3px 4px black;
 text-align: center;
+${HorizontalView({paddingTop:"15%"})};
 ${mobile({paddingTop:"20%"})};
+
 
 
 .HomeLink{
