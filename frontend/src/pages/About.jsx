@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {mobile} from '../responsive'
+import {mobile,HorizontalView} from '../responsive'
 
 const Container = styled.div`
     width: 100%;
@@ -9,6 +9,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     ${mobile({ flexDirection: "row" })} ;
+    ${HorizontalView({height:"300vh"})};
     
     
 `
