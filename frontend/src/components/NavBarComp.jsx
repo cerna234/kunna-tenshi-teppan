@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
-import LogoImg from "./Images/logo.png";
+import LogoImg from './Images/logo.png'
 
 const Nav = styled.div`
   display: flex;
   height: 8vh;
   width: 100%;
-  background-color: transparent;
-  position: ${({ click }) => (click ? "fixed" : "absolute")};
+  background-color: none;
+  position: fixed;
   z-index: 1000;
   justify-content: space-around;
 
@@ -26,7 +26,8 @@ const Logo = styled.div`
   text-decoration: none;
   margin-left: 25px;
 
-  img {
+
+img{
     width: 100px;
     height: 100px;
     padding-top: 10px;
@@ -61,6 +62,7 @@ const Links = styled(Link)`
   color: #fff;
   letter-spacing: 1px;
   font-size: 0.8rem;
+  
 
   &:hover {
     color: #e33812;
@@ -94,9 +96,7 @@ const NavBarComp = () => {
 
   return (
     <Nav click={click}>
-      <Logo>
-        <img src={LogoImg}></img>
-      </Logo>
+      <Logo><img src={LogoImg}></img></Logo>
       <NavLinks click={click}>
         <Links to="/" onClick={() => setClick(false)}>
           Home
