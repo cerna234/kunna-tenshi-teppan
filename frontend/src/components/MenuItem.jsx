@@ -31,6 +31,9 @@ const MenuItems = styled.div`
   @media screen and (max-width: 480px) {
     flex-direction: column;
     justify-content: center;
+    &:first-child {
+      padding-top: 4rem;
+    }
   }
 `;
 
@@ -57,7 +60,7 @@ const Price = styled.p`
 const PageInfo = styled.p`
   display: flex;
   align-items: center;
-  padding: 2px;
+  padding: 1rem 0;
   justify-content: center;
   color: white;
   font-size: 2rem;

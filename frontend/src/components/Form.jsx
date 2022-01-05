@@ -23,9 +23,9 @@ const FormContainer = styled.div`
   max-width: 1300px;
   /* background-color: rgb(24, 24, 24); */
   border: 0px solid black;
-  border-radius: 5px;
+  /* border-radius: 5px;
   box-sizing: border-box;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8); */
 
   @media screen and (max-width: 630px) {
     width: 90%;
@@ -35,6 +35,7 @@ const FormContainer = styled.div`
   @media screen and (max-width: 321px) {
     width: 100%;
     height: 100%;
+    margin-top: 3rem;
   }
 `;
 
@@ -117,9 +118,13 @@ const FormContent = styled.form`
   align-items: left;
   padding: 10px;
   height: 100%;
-margin: 5rem 0;
+  /* margin: 5rem 0; */
   @media screen and (min-width: 1024px) {
     font-size: 2rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin: 0 0 10rem 0;
   }
 `;
 
