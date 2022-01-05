@@ -4,11 +4,14 @@ import { FiInstagram } from "react-icons/fi";
 import { FaFacebookSquare } from "react-icons/fa";
 import { MdRestaurantMenu } from "react-icons/md";
 
+import {HorizontalView} from '../responsive'
+
 const Container = styled.footer`
   background-color: #090909;
   position: sticky;
   /* bottom: -200%; */
   height: 10vh;
+  ${HorizontalView({height: "20vh"})};
   color: white;
   padding: 5px 10px;
   z-index: 200;
