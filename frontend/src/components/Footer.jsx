@@ -6,7 +6,8 @@ import { MdRestaurantMenu } from "react-icons/md";
 
 const Container = styled.footer`
   background-color: #090909;
-  position: relative;
+  position: sticky;
+  /* bottom: -200%; */
   height: 10vh;
   color: white;
   padding: 5px 10px;

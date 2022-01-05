@@ -7,44 +7,47 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: black;
 `;
 
 const FormContainer = styled.div`
   display: flex;
-  justify-content: center;
   position: relative;
-  top: 5vh;
+  top: 8vh;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  height: 80%;
+  height: 100%;
   width: 75%;
   max-width: 1300px;
-  background-color: rgb(24, 24, 24);
+  /* background-color: rgb(24, 24, 24); */
   border: 0px solid black;
   border-radius: 5px;
   box-sizing: border-box;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
 
   @media screen and (max-width: 630px) {
-    width: 85%;
+    width: 90%;
+    /* margin-bottom: 5rem; */
   }
 
   @media screen and (max-width: 321px) {
     width: 100%;
-    height: 90%;
+    height: 100%;
   }
 `;
 
-const Title = styled.h3`
+const Title = styled.h1`
   color: rgba(245, 17, 17, 1);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 900;
   margin-bottom: 1rem;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
 
   @media screen and (min-width: 631px) {
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
   }
 `;
 
@@ -102,7 +105,7 @@ const Label = styled.label`
 `;
 
 const SubSection = styled.div`
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 480px) {
     display: flex;
   }
 `;
@@ -114,7 +117,7 @@ const FormContent = styled.form`
   align-items: left;
   padding: 10px;
   height: 100%;
-
+margin: 5rem 0;
   @media screen and (min-width: 1024px) {
     font-size: 2rem;
   }
